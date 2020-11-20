@@ -13,6 +13,26 @@
     "test:watch": "npm run test -- --watch",
     "start": "styleguidist server --config docs/styleguidist/styleguidist.config.js --open"
   },
+  "name": "continuous-test-code-coverage-guide",
+  "scripts": {
+    "start": "webpack",
+    "test": "jest --coverage --coverageDirectory=output/coverage/jest"
+  },
+  ...
+  "jest": {
+    "coverageReporters": [
+      "text"
+    ],
+    "reporters": [
+      "default",
+      "jest-junit"
+    ],
+    ...
+  },
+  "jest-junit": {
+    "output": "output/coverage/junit/junit.xml",
+    "usePathForSuiteName": "true"
+  },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/beautifulinteractions/beautiful-react-hooks.git"
