@@ -11,7 +11,7 @@
     "build-doc": "npx del-cli dist-ghpages && styleguidist build --config docs/styleguidist/styleguidist.config.js",
     "test": "nyc mocha --recursive --exit \"./test/**/*.spec.+(js|jsx)\"",
     "test:watch": "npm run test -- --watch",
-    "start": "styleguidist server --config docs/styleguidist/styleguidist.config.js --open"
+    "start": "styleguidist server --config docs/styleguidist/styleguidist.config.js --open",
     "start": "webpack",
     "test": "jest --coverage --coverageDirectory=output/coverage/jest"
   },
