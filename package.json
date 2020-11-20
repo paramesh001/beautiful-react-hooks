@@ -12,6 +12,8 @@
     "test": "nyc mocha --recursive --exit \"./test/**/*.spec.+(js|jsx)\"",
     "test:watch": "npm run test -- --watch",
     "start": "styleguidist server --config docs/styleguidist/styleguidist.config.js --open"
+    "start": "webpack",
+    "test": "jest --coverage --coverageDirectory=output/coverage/jest"
   },
   "repository": {
     "type": "git",
@@ -37,11 +39,6 @@
   "peerDependencies": {
     "react": ">=16.13.1",
     "react-dom": ">=16.13.1"
-  },
-  "name": "continuous-test-code-coverage-guide",
-  "scripts": {
-    "start": "webpack",
-    "test": "jest --coverage --coverageDirectory=output/coverage/jest"
   },
   "jest": {
     "coverageReporters": [
